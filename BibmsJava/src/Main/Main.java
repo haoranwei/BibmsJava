@@ -1,5 +1,4 @@
 package Main;
-
 import java.util.Scanner;
 
 import cn.dao.impl.AccountDaoImpl;
@@ -16,7 +15,8 @@ public class Main {
 		while (true) {
 			Scanner input = new Scanner(System.in);
 			System.out.println("========欢迎使用银行中间业务系统:========");
-			System.out.println("====" + "1.登录;2.注册;3.转账;4.退出====");
+			System.out.println("========本代码由Java第2小组呈现========");
+			System.out.println("=====" + "1.登录;2.注册;3.转账;4.退出======");
 			System.out.print("--->>>" + "请选择：");
 			int choice = input.nextInt();
 			if (choice == 1) {
@@ -74,15 +74,14 @@ public class Main {
 				UserServiceImpl usi = new UserServiceImpl();
 				usi.register();
 				continue;
-
 			} else if (choice == 3) {
 				Transfer transfer = new Transfer();
 				System.out.println("开始转账...");
-				System.out.print("请输入转出账户");
+				System.out.println("请输入转出账户：（bibms_account表中的account字段）");
 				String transOutAcc = input.next();
-				System.out.print("请输入转入账户");
+				System.out.println("请输入转入账户：（bibms_account表中的account字段）");
 				String transInAcc = input.next();
-				System.out.print("请输入转出金额");
+				System.out.println("请输入转出金额：（对应数据库的account）（例如：100.00 需要精确到小数点后两位！）");
 				Double transAmount = input.nextDouble();
 				System.out.println("请输入id号");
 				int id = input.nextInt();
@@ -103,6 +102,8 @@ public class Main {
 				asi.modifyInfo(transfer);
 			} else {
 				System.out.println("感谢您的使用！");
+				System.out.println("本代码由Java第2小组呈现");
+				System.out.println("主要框架设计及实现者:韦浩然");
 			}
 		}
 

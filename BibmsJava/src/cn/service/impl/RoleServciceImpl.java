@@ -43,12 +43,8 @@ public class RoleServciceImpl implements RoleService {
 		role.setRoleNo(roleNo);
 
 		RoleDaoImpl rdi = new RoleDaoImpl();
-		int i = rdi.select(role);
-		if (i != 0) {
-			System.out.println("注册成功!");
-		} else {
-			System.out.println("注册失败!");
-		}
+		role = rdi.select(role);
+		System.out.println("查询结果为："+role.getRoleName());
 
 	}
 

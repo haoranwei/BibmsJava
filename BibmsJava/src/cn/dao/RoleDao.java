@@ -12,6 +12,6 @@ public interface RoleDao {
 
     int update(Role role);
     
-    int select(Role role);
+    Role select(Role role);
 //    public Role getRoleById(int roleID);
 }

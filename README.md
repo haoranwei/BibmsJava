@@ -21,7 +21,5 @@ August 28, 2023 log:
 
 How to contact me?
 haoranwei@outlook.com
-wei.haoran@outlook.com
 如何联系我？
 haoranwei@outlook.com
-wei.haoran@outlook.com
